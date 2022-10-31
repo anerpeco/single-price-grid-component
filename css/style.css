@@ -1,0 +1,151 @@
+:root {
+    --cyan: hsl(179, 62%, 43%);
+    --bright_yellow: hsl(71, 73%, 54%);
+    --light_gray: hsl(204, 43%, 93%);
+    --grayish_blue: hsl(218, 22%, 67%);
+
+    --font_karla: "Karla", sans-serif;
+}
+
+body {
+    background-color: var(--light_gray);
+    font-family: var(--font_karla);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 4rem 0.6rem 3rem;
+}
+
+article {
+    margin: 0 auto;
+    max-width: 19rem;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "subscription" "why";
+    border-radius: 0.5rem;
+    box-shadow: 0 0.6rem 1.6rem 0 rgba(152, 166, 189, 0.8);
+    overflow: hidden;
+}
+
+.our_community {
+    grid-area: header;
+    padding: 1.5rem;
+}
+
+.our_community h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cyan);
+    margin-bottom: 1rem;
+}
+
+.our_community .money_guarantee {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--bright_yellow);
+    margin-bottom: 1rem;
+}
+
+.our_community .our_community_text {
+    font-weight: 400;
+    color: var(--grayish_blue);
+}
+
+.subscription {
+    grid-area: subscription;
+    padding: 1.5rem;
+    background-color: var(--cyan);
+    font-size: 1.1;
+    color: white;
+}
+
+.subscription h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subscription .subscription_price_mth {
+    display: flex;
+    gap: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subscription span {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--light_gray);
+    align-self: center;
+}
+
+.subscription .subscription_price_day {
+    margin-bottom: 1rem;
+}
+
+.subscription a {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--bright_yellow);
+    color: white;
+    text-decoration: none;
+    padding: 1rem 0;
+    border-radius: 0.7rem;
+    box-shadow: 0 0.6rem 1.6rem 0 rgba(51, 86, 56, 0.5);
+}
+
+.why_us {
+    grid-area: why;
+    background-color: #49bebd;
+    padding: 1.5rem;
+}
+
+.why_us h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.why_us ul {
+    color: var(--light_gray);
+    font-weight: 400;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 700px) {
+
+    body {
+
+        padding: 10rem 0.6rem 3rem;
+    }
+
+    article {
+        max-width: 39rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "header header" "subscription why";
+    }
+
+    .subscription a:hover {
+        transform: scale(1.03);
+    }
+
+    .subscription .subscription_price_day {
+        margin-bottom: 1.5rem;
+    }
+}
